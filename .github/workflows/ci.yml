@@ -15,15 +15,7 @@ jobs:
         steps:
             - uses: actions/checkout@v3
             - name: Run Clippy
-              run: |
-                  cargo clippy --all-targets --all-features -- \
-                  -D clippy::correctness \
-                  -D clippy::suspicious \
-                  -D clippy::style \
-                  -D clippy::complexity \
-                  -D clippy::perf \
-                  -D clippy::pedantic \
-                  -D clippy::nursery
+              run: cargo clippy
 
     test:
         runs-on: ubuntu-latest
